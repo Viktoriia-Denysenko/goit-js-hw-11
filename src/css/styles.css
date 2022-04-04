@@ -13,31 +13,3 @@ body {
   color: #212121;
   line-height: 2.2;
 }
-
-#search-box {
-  font: inherit;
-  padding: 8px;
-  max-width: 320px;
-  margin: 5px;
-}
-
-.country-list{
-  list-style: none;
-}
-
-li{
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-span{
-  font-weight: 600;
-}
-
-img{
-  width: 14px;
-  margin-right: 5px;
-  margin-left: 5px;
-}
