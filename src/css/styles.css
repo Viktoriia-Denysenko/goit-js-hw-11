@@ -1,15 +1,69 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.search-form{
+background-color: #02027e;
+text-align: center;
+padding-bottom: 5px;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  color: #212121;
-  line-height: 2.2;
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.photo-card{
+flex: 0 0 24%;
+margin: 5px;
+/* border: 1px solid rgba(88, 88, 88, 0.425); */
+box-shadow: 1px 1px 1px 1px rgba(138, 137, 137, 0.425);
+}
+
+img{
+display: block;
+width: 315px;
+height: 200px;
+margin: auto;
+}
+
+.info{
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-item{
+    /* display: flex; */
+    flex: 0 0 10%;
+    /* margin: 2px; */
+    /* border: 1px solid #02027e; */
+    text-align: center;
+}
+
+/* .info-item:first-child {
+    margin-left: 0;
+}
+
+.info-item:last-child{
+    margin-right: 0;
+} */
+
+b{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.card-description{
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.load-more{
+    display: block;
+    background-color: #02027e;
+    color: #fff;
+    padding: 10px 5px;
+    text-transform: uppercase;
+    margin: auto;
+}
+
+.is-hidden{
+    display: none;
 }
