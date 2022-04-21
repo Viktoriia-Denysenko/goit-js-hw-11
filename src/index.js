@@ -1,7 +1,6 @@
 import './css/styles.css';
 import Notiflix from 'notiflix';
 import PictureApiService from './js/apiService.js';
-import axios from 'axios';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
@@ -34,12 +33,12 @@ function onFormSubmit(evt) {
 }
 
 function onFetchRequest(pictures) {
-  const pictureArray = pictures.hits;
-  const totalPicture = `${pictures.totalHits}`;
+  const pictureArray = pictures.data.hits;
+  const totalPicture = `${pictures.data.totalHits}`;
   const pageSize = 40;
   totalPage = totalPicture / pageSize;
 
-  if (pictures.total === 0) {
+  if (pictures.data.total === 0) {
     throw new Error(res.status);
   } else if (pictureApiService.pageNumber === 1) {
     Notiflix.Notify.success(`Hooray! We found ${totalPicture} images.`);
@@ -73,7 +72,6 @@ function onFetchRequest(pictures) {
     .join('');
 
   galleryRef.insertAdjacentHTML('beforeend', markup);
-  // galleryRef.innerHTML = markup;
 
   lightbox = new SimpleLightbox('.gallery a');
 
@@ -86,6 +84,7 @@ function onFetchError() {
   Notiflix.Notify.failure(
     'Sorry, there are no images matching your search query. Please try again.',
   );
+  loadMoreBtnRef.classList.add('is-hidden');
 }
 
 function onLoadMoreButtonClick() {
@@ -94,7 +93,7 @@ function onLoadMoreButtonClick() {
     loadMoreBtnRef.classList.add('is-hidden');
   }
   pictureApiService.pageIncrement();
-  pictureApiService.fetchPicture().then(onFetchRequest).catch(onFetchError);
+  pictureApiService.fetchPicture().then(onFetchRequest);
 
   loadMoreBtnRef.classList.add('is-hidden');
   lightbox.refresh();
