@@ -3,16 +3,16 @@ body{
 }
 
 .search-form{
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100vw;
-height: 40px;
-background-color: #02027e;
-text-align: center;
-padding-bottom: 5px;
-position: fixed;
-z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 40px;
+    background-color: #02027e;
+    text-align: center;
+    padding-bottom: 5px;
+    position: fixed;
+    z-index: 1000;
 }
 
 .search-form-input{
@@ -40,16 +40,16 @@ z-index: 1000;
 }
 
 .photo-card{
-flex: 0 0 24%;
-margin: 5px;
-box-shadow: 1px 1px 1px 1px rgba(138, 137, 137, 0.425);
+    flex: 0 0 24%;
+    margin: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(138, 137, 137, 0.425);
 }
 
 img{
-display: block;
-width: 315px;
-height: 200px;
-margin: auto;
+    display: block;
+    width: 315px;
+    height: 200px;
+    margin: auto;
 }
 
 .info{
