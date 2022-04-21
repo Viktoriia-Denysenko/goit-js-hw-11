@@ -90,14 +90,12 @@ function onFetchError() {
 function onLoadMoreButtonClick() {
   pictureApiService.pageIncrement();
   pictureApiService.fetchPicture().then(onFetchRequest).catch(onLoadMoreError);
-
   loadMoreBtnRef.classList.add('is-hidden');
   lightbox.refresh();
 }
 
 function onLoadMoreError() {
   Notiflix.Notify.warning('We are sorry, but you have reached the end of search results.');
-  loadMoreBtnRef.classList.add('is-hidden');
 }
 
 function clearGallery() {
